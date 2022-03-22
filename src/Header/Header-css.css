@@ -1,0 +1,41 @@
+.NavBar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -2vh;
+  margin-right: 2vw;
+}
+.NavBar ul li {
+  /* margin: 5px; */
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0px 5px 0px 5px;
+  color: rgb(64, 97, 187);
+  cursor: pointer;
+}
+a {
+  margin-left: 2vw;
+  display: block;
+  width: auto;
+  font-size: x-large;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav .brand-logo.center {
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media only screen and (max-width: 650px) {
+  nav .brand-logo.center {
+    top: 0%;
+  }
+}

@@ -1,26 +1,50 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import "./Header-css.css";
 
 function Header() {
+  const openForm = () => {
+    document.getElementById("AdminRegistration").style.height = "100%";
+    document.getElementById("AdminRegistration").style.width = "100%";
+    document.getElementById("home").style.display = "none";
+  };
+
+  const submitInput = (input) => {};
   return (
-    <nav>
-      <div class="nav-wrapper blue darken-1">
-        <a href="#" class="brand-logo center">
+    <>
+      <nav className="NavBar">
+        <div class="nav blue darken-1 navbar">
           <div>
-            <b>Diagnosis Zone </b>
+            <a href="#">Diagnosis Zone</a>
           </div>
-        </a>
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required />
-            <label class="label-icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <i class="material-icons">close</i>
+
+          <div>
+            <ul id="nav-mobile" class="right">
+              <li onClick={() => openForm()}>
+                <strong>Register hospital</strong>
+              </li>
+            </ul>
           </div>
-        </form>
-      </div>
-    </nav>
+        </div>
+      </nav>
+      <nav>
+        <div class="nav-wrapper blue">
+          <form>
+            <div class="input-field">
+              <input
+                onSubmit={(e) => submitInput(e.target.value)}
+                id="search"
+                type="search"
+                required
+              />
+              <label class="label-icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </>
   );
 }
 
