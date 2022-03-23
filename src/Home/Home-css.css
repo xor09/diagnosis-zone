@@ -65,7 +65,7 @@ img {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: flex-start;
   align-items: center;
 }
@@ -110,7 +110,9 @@ img {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   padding: 10px;
 }
-.hospitalcard .hospitalDitails {
+.hospitalcard .hospitalDitails,
+.hospitalPricingDetails,
+.bookNowContainer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +120,9 @@ img {
   justify-content: flex-start;
   align-items: center;
 }
-.hospitalcard .hospitalDitails span {
+.hospitalcard .hospitalDitails span,
+.hospitalcard .hospitalPricingDetails span,
+.bookNowContainer button {
   background-color: white;
   color: black;
   padding: 5px;
@@ -135,7 +139,26 @@ img {
 .frontCardFooter button {
   color: white;
 }
-
+.bookNowContainer {
+  height: 3rem;
+  justify-content: space-between;
+}
+.bookNowContainer button {
+  background-color: rgb(12, 192, 12);
+  color: white;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bookNowContainer button .contactUsLink {
+  font-size: 11px;
+  color: white;
+  margin-left: 0;
+  font-size: 14px;
+}
 @media only screen and (max-width: 650px) {
   .home {
     flex-direction: column;

@@ -3,34 +3,14 @@ import "./Home-css.css";
 import p_lady from "../images/p_lady.jpg";
 import cancelImg from "../images/cancel.png";
 import firebase from "../firebase";
-import "firebase/compat/database";
-const database = firebase.database();
 
-function Home() {
-  const [container, setContainer] = useState(false);
-  const [totalList, setTotalList] = useState(null);
-  const [subList, setsubList] = useState(null);
-
-  useMemo(() => {
-    database.ref("Hospitals").on("value", (data) => {
-      setTotalList(Object.entries(data.val()));
-    });
-  }, []);
-  // useMemo(() => {
-  //   console.log(totalList);
-  // }, [totalList]);
-
-  const getContainer = (type) => {
-    setsubList(totalList.filter((data) => data[1].type === type));
-    setContainer(!container);
-  };
-
+const Home = ({ container, getContainer, subList, bookNowFunc }) => {
   return container ? (
-    <div className="hostipleContainer">
+    <div id="hostipleContainer" className="hostipleContainer">
       <header>
         <h5>Hospitals List</h5>
         <button>
-          <img src={cancelImg} onClick={() => getContainer()}></img>
+          <img src={cancelImg} onClick={() => getContainer("", 0)}></img>
         </button>
       </header>
       <div className="hospitalCards">
@@ -77,6 +57,38 @@ function Home() {
                     <span>ICU beds: {data[1].ICU_Beds}</span>
                     <span>Oxygen Cylinders: {data[1].oxygen_cylinder}</span>
                   </div>
+                  <hr
+                    style={{
+                      height: 5,
+                      backgroundColor: "white",
+                      borderRadius: 10,
+                    }}
+                  ></hr>
+                  <div className="hospitalPricingDetails">
+                    <span>ICU bed price: {data[1].covidBedPrice}</span>
+                  </div>
+                  <hr
+                    style={{
+                      height: 5,
+                      backgroundColor: "white",
+                      borderRadius: 10,
+                    }}
+                  ></hr>
+                  <div className="bookNowContainer">
+                    <button
+                      data-id={index}
+                      onClick={() => bookNowFunc(data[0])}
+                      type="button"
+                      className="bookBtn"
+                    >
+                      Book Now
+                    </button>
+                    <button type="button" className="bookBtn">
+                      <a className="contactUsLink" href="tel:+919016236434">
+                        contact us
+                      </a>
+                    </button>
+                  </div>
                 </main>
               </div>
             );
@@ -101,7 +113,7 @@ function Home() {
               </p>
             </div>
             <div class="card-action frontCardFooter">
-              <button href="#" onClick={() => getContainer("general")}>
+              <button href="#" onClick={() => getContainer("General", 1)}>
                 more..
               </button>
             </div>
@@ -121,7 +133,7 @@ function Home() {
               </p>
             </div>
             <div class="card-action frontCardFooter">
-              <button href="#" onClick={() => getContainer("covid")}>
+              <button href="#" onClick={() => getContainer("covid", 1)}>
                 more..
               </button>
             </div>
@@ -141,7 +153,7 @@ function Home() {
               </p>
             </div>
             <div class="card-action frontCardFooter">
-              <button href="#" onClick={() => getContainer("metarnity")}>
+              <button href="#" onClick={() => getContainer("maternity", 1)}>
                 more..
               </button>
             </div>
@@ -150,6 +162,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

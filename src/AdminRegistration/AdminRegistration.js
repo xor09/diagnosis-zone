@@ -8,6 +8,7 @@ function AdminRegistration() {
   const closeForm = () => {
     document.getElementById("AdminRegistration").style.height = "0%";
     document.getElementById("AdminRegistration").style.width = "0%";
+    document.getElementById("AdminRegistration").style.display = "none";
     document.getElementById("home").style.display = "flex";
   };
   const submitForm = () => {
