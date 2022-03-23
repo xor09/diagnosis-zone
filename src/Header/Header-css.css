@@ -88,11 +88,6 @@ nav .brand-logo.center {
   color: white;
   margin: 0px 50px;
 }
-@media only screen and (max-width: 650px) {
-  nav .brand-logo.center {
-    top: 0%;
-  }
-}
 
 /* label underline focus color */
 .input-field input[type="text"]:focus {
@@ -110,4 +105,15 @@ nav .brand-logo.center {
   font-weight: 600;
   font-size: 40px;
   font-family: "Fredoka One", cursive;
+}
+@media only screen and (max-width: 650px) {
+  nav .brand-logo.center {
+    top: 0%;
+  }
+  .websiteTitle {
+    font-size: 20px;
+  }
+  .searchBarContainer {
+    margin-top: 2rem;
+  }
 }
