@@ -8,17 +8,47 @@
 .NavBar ul li {
   /* margin: 5px; */
   height: 50px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(27, 67, 179);
   border-radius: 10px;
   padding: 0px 5px 0px 5px;
-  color: rgb(64, 97, 187);
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #00d2ff 0%,
+    #3a7bd5 51%,
+    #00d2ff 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 a {
   margin-left: 2vw;
   display: block;
   width: auto;
   font-size: x-large;
+  color: blue;
+  text-decoration: none;
 }
 
 .navbar {
@@ -51,7 +81,7 @@ nav .brand-logo.center {
   cursor: pointer;
 }
 .searchBarContainer input,
-input[type="text"]:not(.browser-default) {
+.searchBarInput {
   outline: none;
   border: none;
   background-color: white;
@@ -71,6 +101,13 @@ input[type="text"]:not(.browser-default) {
 }
 
 .websiteLogo {
-  height: 60px;
-  width: 90px;
+  height: 70px;
+  width: 150px;
+}
+
+.websiteTitle {
+  color: rgba(34, 34, 184, 0.836);
+  font-weight: 600;
+  font-size: 40px;
+  font-family: "Fredoka One", cursive;
 }

@@ -45,8 +45,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
-.bookForm_inputs input,
-input[type="text"]:not(.browser-default) {
+.bookForm_inputs input {
   color: black;
 }
 .wardType {

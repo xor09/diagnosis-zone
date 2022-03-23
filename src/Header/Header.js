@@ -18,10 +18,12 @@ const Header = ({ subList, getContainer }) => {
   return (
     <>
       <nav className="NavBar">
-        <div class="nav blue darken-1 navbar">
+        <div class="nav white navbar">
           <img className="websiteLogo" src={logo} alt="Care Touch" />
           <div>
-            <a href="#">Care Touch</a>
+            <a href="#" className="websiteTitle">
+              Care Touch
+            </a>
           </div>
 
           <div>
@@ -35,6 +37,7 @@ const Header = ({ subList, getContainer }) => {
       </nav>
       <div className="searchBarContainer">
         <input
+          className="searchBarInput input"
           onChange={(e) => setSearchBarInput(e.target.value)}
           type="text"
           placeholder="search hospital, city, etc."

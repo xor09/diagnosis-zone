@@ -21,20 +21,24 @@ const Home = ({ container, getContainer, subList, bookNowFunc }) => {
             return (
               <div className="hospitalcard">
                 <header className="hospitalcard_header">
-                  <img className="cardImg" src={p_lady} alt="card photo"></img>
+                  <img
+                    className="cardImg"
+                    src={general_img}
+                    alt="card photo"
+                  ></img>
                 </header>
                 <main>
                   <div>
-                    <h4>{data[0]}</h4>
+                    <h4>- {data[0]}</h4>
                   </div>
                   <div>
-                    <h5>{data[1].type}</h5>
+                    <h5>- {data[1].type}</h5>
                   </div>
                   <div>
-                    <p>{data[1].description}</p>
+                    <p>- {data[1].description}</p>
                   </div>
                   <div>
-                    <p>{data[1].address}</p>
+                    <p>- {data[1].address}</p>
                   </div>
                   <div>
                     <p>
@@ -42,7 +46,7 @@ const Home = ({ container, getContainer, subList, bookNowFunc }) => {
                     </p>
                   </div>
                   <div>
-                    <p>{data[1].state}</p>
+                    <p>- {data[1].state}</p>
                   </div>
                   <div>
                     <hr
@@ -76,6 +80,16 @@ const Home = ({ container, getContainer, subList, bookNowFunc }) => {
                       borderRadius: 10,
                     }}
                   ></hr>
+                  <div className="googleMapCointainer">
+                    <iframe
+                      className="googleMap"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.366227725072!2d81.57733031472796!3d21.256966185324792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28de23ea073ba1%3A0x9de4d779d976c7c9!2sAIIMS%20RAIPUR!5e0!3m2!1sen!2sin!4v1648011345883!5m2!1sen!2sin"
+                      width="600"
+                      height="450"
+                      allowfullscreen=""
+                      loading="lazy"
+                    ></iframe>
+                  </div>
                   <div className="bookNowContainer">
                     <button
                       data-id={index}
