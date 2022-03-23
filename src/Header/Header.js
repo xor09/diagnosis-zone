@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import "./Header-css.css";
 import searchBar from "../images/search (1).png";
+import logo from "../images/CareTouch_logo.png";
 
 const Header = ({ subList, getContainer }) => {
   const openForm = () => {
@@ -18,6 +19,7 @@ const Header = ({ subList, getContainer }) => {
     <>
       <nav className="NavBar">
         <div class="nav blue darken-1 navbar">
+          <img className="websiteLogo" src={logo} alt="Care Touch" />
           <div>
             <a href="#">Care Touch</a>
           </div>

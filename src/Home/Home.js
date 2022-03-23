@@ -1,7 +1,9 @@
 import React, { useState, useMemo } from "react";
 import "./Home-css.css";
 import p_lady from "../images/p_lady.jpg";
+import covid_img from "../images/covid_img.jpg";
 import cancelImg from "../images/cancel.png";
+import general_img from "../images/general_img.jpg";
 import firebase from "../firebase";
 
 const Home = ({ container, getContainer, subList, bookNowFunc }) => {
@@ -105,7 +107,7 @@ const Home = ({ container, getContainer, subList, bookNowFunc }) => {
           <div class="card blue-grey darken-1 frontCards">
             <div class="card-content white-text">
               <span class="card-title">General</span>
-              <img src={p_lady} class="center"></img>
+              <img src={general_img} class="center"></img>
               <p>
                 I am a very simple card. I am good at containing small bits of
                 information. I am convenient because I require little markup to
@@ -125,7 +127,7 @@ const Home = ({ container, getContainer, subList, bookNowFunc }) => {
           <div class="card blue-grey darken-1 frontCards">
             <div class="card-content white-text">
               <span class="card-title">Covid</span>
-              <img src={p_lady} class="center"></img>
+              <img src={covid_img} class="center"></img>
               <p>
                 I am a very simple card. I am good at containing small bits of
                 information. I am convenient because I require little markup to
@@ -144,7 +146,7 @@ const Home = ({ container, getContainer, subList, bookNowFunc }) => {
         <div class="col s12 m6">
           <div class="card blue-grey darken-1 frontCards">
             <div class="card-content white-text">
-              <span class="card-title">Metarnity</span>
+              <span class="card-title">Maternity</span>
               <img src={p_lady} class="center"></img>
               <p>
                 I am a very simple card. I am good at containing small bits of
