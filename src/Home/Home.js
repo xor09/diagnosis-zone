@@ -67,7 +67,7 @@ const Home = ({ container, getContainer, subList, bookNowFunc }) => {
                     }}
                   ></hr>
                   <div className="hospitalPricingDetails">
-                    <span>ICU bed price: {data[1].covidBedPrice}</span>
+                    <span>Covid bed price: {data[1].covidBedPrice}</span>
                   </div>
                   <hr
                     style={{
